@@ -1,0 +1,45 @@
+from tkinter import *
+from tkinter import ttk
+
+root = Tk()
+root.geometry("300x550")
+root.minsize(300,150)
+root.maxsize(1000,600)
+# root.bg("white")
+root.title("GUI")
+from PIL import Image, ImageTk
+
+rootcanvas = Canvas(width=400, height=650, bg="white")
+rootcanvas.place(x=0, y=0)
+
+
+# Heading Starts Here
+
+heading = Label(root, text="NASA", fg="black", bg="white", font=("Arial", 16), padx=15)
+heading.place(x=10, y=10)
+
+heading = Label(root, text="1 - 7 of 25,256", fg="black", bg="white", font=("Arial", 8), padx=15)
+heading.place(x=90, y=15)
+
+my_canvas = Canvas(width=350, height=3, bg="skyblue")
+my_canvas.place(x=0, y=40)
+
+
+
+img1=Image.open("C://Users//...//image.png")
+pic1=ImageTk.PhotoImage(dots)
+# img1=Label(root, image=pic1, bg="white")
+# img1.place(x=280, y=5)
+
+def our_command():
+    pass
+mb = Menubutton(root, image=options, bg="white")
+mb.menu= Menu(mb)
+mb["menu"] = mb.menu
+mb.menu.add_command(label="Settings", command=our_command)
+mb.menu.add_checkbutton(label="one", command=our_command)
+mb.menu.add_checkbutton(label="two", command=our_command)
+
+mb.place(x=280, y=5)
+
+root.mainloop()
